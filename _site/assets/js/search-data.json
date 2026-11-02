@@ -188,258 +188,454 @@
     
     "relUrl": "/cookbook/bqconnectcli.html"
   },"27": {
+    "doc": "Code of Conduct",
+    "title": "Contributor Covenant Code of Conduct",
+    "content": " ",
+    "url": "/contribute/code-of-conduct/#contributor-covenant-code-of-conduct",
+    
+    "relUrl": "/contribute/code-of-conduct/#contributor-covenant-code-of-conduct"
+  },"28": {
+    "doc": "Code of Conduct",
+    "title": "Our Pledge",
+    "content": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation. We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community. ",
+    "url": "/contribute/code-of-conduct/#our-pledge",
+    
+    "relUrl": "/contribute/code-of-conduct/#our-pledge"
+  },"29": {
+    "doc": "Code of Conduct",
+    "title": "Our Standards",
+    "content": "Examples of behavior that contributes to a positive environment for our community include: . | Demonstrating empathy and kindness toward other people | Being respectful of differing opinions, viewpoints, and experiences | Giving and gracefully accepting constructive feedback | Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience | Focusing on what is best not just for us as individuals, but for the overall community | . Examples of unacceptable behavior include: . | The use of sexualized language or imagery, and sexual attention or advances of any kind | Trolling, insulting or derogatory comments, and personal or political attacks | Public or private harassment | Publishing others’ private information, such as a physical or email address, without their explicit permission | Other conduct which could reasonably be considered inappropriate in a professional setting | . ",
+    "url": "/contribute/code-of-conduct/#our-standards",
+    
+    "relUrl": "/contribute/code-of-conduct/#our-standards"
+  },"30": {
+    "doc": "Code of Conduct",
+    "title": "Enforcement Responsibilities",
+    "content": "Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful. Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate. ",
+    "url": "/contribute/code-of-conduct/#enforcement-responsibilities",
+    
+    "relUrl": "/contribute/code-of-conduct/#enforcement-responsibilities"
+  },"31": {
+    "doc": "Code of Conduct",
+    "title": "Scope",
+    "content": "This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. ",
+    "url": "/contribute/code-of-conduct/#scope",
+    
+    "relUrl": "/contribute/code-of-conduct/#scope"
+  },"32": {
+    "doc": "Code of Conduct",
+    "title": "Enforcement",
+    "content": "Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at . All complaints will be reviewed and investigated promptly and fairly. All community leaders are obligated to respect the privacy and security of the reporter of any incident. ",
+    "url": "/contribute/code-of-conduct/#enforcement",
+    
+    "relUrl": "/contribute/code-of-conduct/#enforcement"
+  },"33": {
+    "doc": "Code of Conduct",
+    "title": "Enforcement Guidelines",
+    "content": "Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct: . 1. Correction . Community Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community. Consequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested. 2. Warning . Community Impact: A violation through a single incident or series of actions. Consequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban. 3. Temporary Ban . Community Impact: A serious violation of community standards, including sustained inappropriate behavior. Consequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban. 4. Permanent Ban . Community Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals. Consequence: A permanent ban from any sort of public interaction within the community. ",
+    "url": "/contribute/code-of-conduct/#enforcement-guidelines",
+    
+    "relUrl": "/contribute/code-of-conduct/#enforcement-guidelines"
+  },"34": {
+    "doc": "Code of Conduct",
+    "title": "Attribution",
+    "content": "This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html. Community Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder. For answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations. ",
+    "url": "/contribute/code-of-conduct/#attribution",
+    
+    "relUrl": "/contribute/code-of-conduct/#attribution"
+  },"35": {
+    "doc": "Code of Conduct",
+    "title": "Code of Conduct",
+    "content": " ",
+    "url": "/contribute/code-of-conduct/",
+    
+    "relUrl": "/contribute/code-of-conduct/"
+  },"36": {
     "doc": "Cookbooks",
     "title": "CLI Tool",
     "content": "For users preferring a scriptable interface, our Command Line Interface (CLI) tool offers an easy to use entry point. It is ideal for integrating biometric analysis into automated workflows or for users who prefer terminal-based operations. Highlights . | Full access to fingerprint, face, iris, and speech analysis modules | Multi-core processing enabled | Simple integration into existing scripts or workflows | . ",
     "url": "/cookbook/cookbook.html#cli-tool",
     
     "relUrl": "/cookbook/cookbook.html#cli-tool"
-  },"28": {
+  },"37": {
     "doc": "Cookbooks",
     "title": "Cookbooks",
     "content": "The openbq bqconnect suite offers tools for assessing the quality of biometric data. It supports biometric modalities including fingerprints, face, iris, and voice. Developed by our experienced team, our tools are designed for flexibility, ease of use, and integration into existing projects. ",
     "url": "/cookbook/cookbook.html",
     
     "relUrl": "/cookbook/cookbook.html"
-  },"29": {
+  },"38": {
     "doc": "Face",
     "title": "Overview",
     "content": "The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. Face image quality issues to investigate: . ",
     "url": "/modalities/face.html#overview",
     
     "relUrl": "/modalities/face.html#overview"
-  },"30": {
+  },"39": {
     "doc": "Face",
     "title": "Input",
     "content": "Supported file type: JPG, JPEG, JP2, BMP, PNG . ",
     "url": "/modalities/face.html#input",
     
     "relUrl": "/modalities/face.html#input"
-  },"31": {
+  },"40": {
     "doc": "Face",
     "title": "Output",
     "content": "openbq will produce quality metrics generated by processing engine selected in addition to input file metadata. The outputs will be stored as CSV via bqconnect CLI. Optional processing engines: . | OBQE | OFIQ . | ISO/IEC 29794-5 | . | BIQT | . OBQE (Open Biometric Quality Engine by OpenBQ) . | Column | Description | . | file | Path to the input file | . | ipd | Inter-pupillary distance | . | confidence | Confidence level of face dectection (not quality score) | . | bbox_left | Left border of the face bounding box coordinates in pixels | . | bbox_upper | Upper border of the face bounding box coordinates in pixels | . | bbox_right | Right border of the face bounding box coordinates in pixels | . | bbox_bottom | Bottom border of the face bounding box coordinates in pixels | . | eye_closed_left | Left eye close or not | . | eye_closed_right | Right eye close or not | . | pupil_right_x | X coordinates of right pupil in pixels | . | pupil_right_y | Y coordinates of right pupil in pixels | . | pupil_left_x | X coordinates of left pupil in pixels | . | pupil_left_y | Y coordinates of left pupil in pixels | . | yaw_pose | Yaw in head pose direction | . | yaw_degree | Yaw in head pose degree | . | pitch_pose | Pitch in head pose direction | . | pitch_degree | Pitch in head pose degree | . | roll_pose | Roll in head pose direction | . | roll_degree | Roll in head pose degree | . | smile | Smile detected or not | . | glasses | Glasses detected or not | . | image_width | Width of the input image in pixels | . | image_height | Height of the input image in pixels | . | face_ratio | Ratio of face area to the whole image | . | brightness | Average brightness of the image | . | dynamic_range | Dynamic range of the image | . | sharpness | Sharpness of the image | . | contrast | Contrast of the image | . | face_offset_x | Horizontal offset of the face from image centre | . | face_offset_y | Vertical offset of the face from image centre | . | background_colour_name | Background colour name | . | background_colour_rgb | Background colour RGB values | . | background_colour_variance | Background colour variance | . | hair_coverage | Coverage ratio of detected hair area to whole face bounding box | . | brightness_variance | Estimation of image brightness variance | . | blurriness | Blur effect metric. An estimate strength of perceptual blurriness | . | gaze_right_x | Right eyeball gazing direction offset percentage horizontal | . | gaze_right_y | Right eyeball gazing direction offset percentage vertical | . | gaze_left_x | Left eyeball gazing direction offset percentage horizontal | . | gaze_left_y | Left eyeball gazing direction offset percentage vertical | . | pupil_colour_right_name | Right pupil colour name | . | pupil_colour_right_rgb | Right pupil colour RGB values | . | pupil_colour_left_name | Left pupil colour name | . | pupil_colour_left_rgb | Left pupil colour RGB values | . | head_top | Top border of head location estimation | . | head_bottom | Bottom border of head location estimation | . | head_right | Right border of head location estimation | . | head_left | Left border of head location estimation | . OFIQ . | Column | Description | . | file | Filename of the input | . | quality | MagFace-based unified quality score measure | . | background_uniformity | Gradient-based background uniformity | . | illumination_uniformity | Illumination uniformity by summing up the minima of the histograms of the left and the right side of the face | . | luminance_mean | Luminance mean measure computed from the luminance histogram | . | luminance_variance | Luminance variance measure computed from the luminance histogram | . | under_exposure_prevention | Under-exposure prevention by computing the proportion of low-intensity pixels in the luminance image to assess the abscence of under-exposure | . | over_exposure_prevention | Over-exposure prevention by computing the proportion of high-intensity pixels in the luminance image to assess the abscence of over-exposure | . | dynamic_range | Dynamic range computed from the luminance histogram | . | sharpness | Sharpness assessment based on a random forest classifier trained by the OFIQ development team | . | compression_artifacts | Assessment of the absence of compression artifact (both JPEG and JPEG2000) based on a CNN trained by the OFIQ development team | . | natural_colour | Assessment of the naturalness of the colour based on the conversion of the RGB presentation of the image to the CIELAB colour space | . | single_face_present | Assessment of the uniqueness of the most dominant face detected by comparing its size with the size of the second largest face detected | . | eyes_open | Eyes openness assessment based on computing eyes aspect ratio from eye landmarks | . | mouth_closed | Mouth closed assessment based on computing a ratio from mouth landmarks | . | eyes_visible | Eyes visibility assessment by measuring the coverage of the eye visibility zone with the result of face occlusion segmentation computed during pre-processing | . | mouth_occlusion_prevention | Assessment of the absence of mouth occlusion by measuring the coverage of the mouth region from mouth landmarks with the result of face occlusion segmentation computed on pre-processing | . | face_occlusion_prevention | Assessment of the absence of face occlusion by measuring the coverage of the landmarked region with the result of face occlusion segmentation computed during pre-processing | . | inter_eye_distance | Inter-eye distance assessment based on computing the Euclidean length of eyes centres and multiplication with the secant of the yaw angle computed during pre-processing | . | head_size | Size of the head based on computing the height of the face computed from facial landmarks with the height of the image | . | leftward_crop_of_the_face_image | Left of the face image crop | . | rightward_crop_of_the_face_image | Right of the face image crop | . | downward_crop_of_the_face_image | Bottom of the face image crop | . | upward_crop_of_the_face_image | Top of the face image crop | . | head_pose_yaw | Pose angle yaw frontal alignment based on the 3DDFAV2 | . | head_pose_pitch | Pose angle pitch frontal alignment based on the 3DDFAV2 | . | head_pose_roll | Pose angle roll frontal alignment based on the 3DDFAV2 | . | expression_neutrality | Expression neutrality estimation based on a fusion of HSEMotion with Efficient-Expression-Neutrality-Estimation | . | no_head_coverings | Assessment of the absence of head coverings by counting the pixels being labelled as head covers in the mask output by the face parsing computed during pre-processing | . OFIQ Project . BIQT . | Column | Description | . | file | Path to the input file | . | background_deviation | Image background deviation | . | background_grayness | Image background grayness | . | blur | Overall image blurriness | . | blur_face | Face area blurriness | . | focus | Overall image focus | . | focus_face | Face area focus | . | openbr_IPD | Inter eye distance from openbr | . | openbr_confidence | confidence value from openbr | . | opencv_IPD | Inter eye distance from opencv | . | opencv_eye_count | Eye count from opencv | . | opencv_face_found | Face count | . | opencv_face_height | Height of face detected | . | opencv_face_width | Width of face detected | . | opencv_frontal_face_found | Number of front facing head found | . | opencv_landmarks_count | Landmarks of face detected | . | opencv_mouth_count | Number of mouth detected | . | opencv_nose_count | Number of nose detected | . | opencv_profile_face_found | Number of side profile of head | . | over_exposure | Overall image exposure value | . | over_exposure_face | Face area exposure value | . | quality | Overall quality score | . | sap_code | Sap code | . | skin_ratio_face | Skin to face area ratio | . | skin_ratio_full | Skin to fill image area ratio | . | image_area | Image area | . | image_channels | Number of image colour channels | . | image_width | Width of the input image in pixels | . | image_height | Height of the input image in pixels | . | image_ratio | Image aspect ratio | . | openbr_left_eye_x | Left eye x coordinate in pixels | . | openbr_left_eye_y | Left eye y coordinate in pixels | . | openbr_left_eye_x | Right eye x coordinate in pixels | . | openbr_left_eye_x | Right eye y coordinate in pixels | . | opencv_face_center_of_mass_x | Face center of mass x coordinate in pixels | . | opencv_face_center_of_mass_y | Face center of mass y coordinate in pixels | . | opencv_face_offset_x | Face offset x coordinate in pixels | . | opencv_face_offset_y | Face offset y coordinate in pixels | . | opencv_face_x | Face x coordinate in pixels | . | opencv_face_y | Face y coordinate in pixels | . | opencv_left_eye_x | Left eye x coordinate in pixels | . | opencv_left_eye_y | Left eye y coordinate in pixels | . | opencv_right_eye_x | Right eye x coordinate in pixels | . | opencv_right_eye_y | Right eye y coordinate in pixels | . | opencv_mouth_x | Mouth x coordinate in pixels | . | opencv_mouth_y | Mouth y coordinate in pixels | . | opencv_nose_x | Nose x coordinate in pixels | . | opencv_nose_y | Nose y coordinate in pixels | . Not all the columns are included in the table above for clearity. ",
     "url": "/modalities/face.html#output",
     
     "relUrl": "/modalities/face.html#output"
-  },"32": {
+  },"41": {
     "doc": "Face",
     "title": "Face",
     "content": ". | Overview | Input | Output . | OBQE (Open Biometric Quality Engine by OpenBQ) | OFIQ | BIQT | . | . ",
     "url": "/modalities/face.html",
     
     "relUrl": "/modalities/face.html"
-  },"33": {
+  },"42": {
     "doc": "FAQ",
     "title": "Frequently Asked Questions (FAQ)",
     "content": "Let us know if you have question or new idea in the discussion board, or reach out to us! . ",
     "url": "/faq/#frequently-asked-questions-faq",
     
     "relUrl": "/faq/#frequently-asked-questions-faq"
-  },"34": {
+  },"43": {
     "doc": "FAQ",
     "title": "FAQ",
     "content": " ",
     "url": "/faq/",
     
     "relUrl": "/faq/"
-  },"35": {
+  },"44": {
     "doc": "Fingerprint",
     "title": "Overview",
     "content": "The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features (ISO/IEC 29794-4:2024, ISO/IEC 39794-2:2023). The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. ",
     "url": "/modalities/fingerprint.html#overview",
     
     "relUrl": "/modalities/fingerprint.html#overview"
-  },"36": {
+  },"45": {
     "doc": "Fingerprint",
     "title": "Examples of Fingerprint quality variation",
     "content": ". ",
     "url": "/modalities/fingerprint.html#examples-of-fingerprint-quality-variation",
     
     "relUrl": "/modalities/fingerprint.html#examples-of-fingerprint-quality-variation"
-  },"37": {
+  },"46": {
     "doc": "Fingerprint",
     "title": "Input",
     "content": "For fingerprints, the tool works with the image formats WSQ and PNG. For both of these formats, the image will be run directly through NFIQ2. Image formats other than WSQ and PNG are first converted into a compatible format before being run through NFIQ2. NFIQ2 expects images to have a resolution of at least 500 PPI. The tool will force NFIQ2 to run on images of lower resolution, but the result may be inaccurate. ",
     "url": "/modalities/fingerprint.html#input",
     
     "relUrl": "/modalities/fingerprint.html#input"
-  },"38": {
+  },"47": {
     "doc": "Fingerprint",
     "title": "Output",
     "content": "openbq will produce the quality scores generated by the engines as well as additional information in columns. It will be saved as CSV from CLI or JSON from API. Fingerprint: . | Column | Description | . | file | Filename of the sample, including the directory path | . | NFIQ2 | NFIQ2 quality score | . | quantized | Input quantized or not | . | resampled | Input resampled or not | . | uniform_image | Standard deviation of gray levels in image indicates uniformity (NFIQ2) | . | empty_image_or_contrast_too_low | The image is blank or the contrast is too low (NFIQ2) | . | fingerprint_image_with_minutiae | Number of minutia in image (NFIQ2) | . | sufficient_fingerprint_foreground | Number of pixels in the computed foreground (NFIQ2) | . | edge_std | Metric to identify malformed images | . | image_width | Width of the input in pixels | . | image_height | Height of the input in pixels | . NIST Interagency Report . ",
     "url": "/modalities/fingerprint.html#output",
     
     "relUrl": "/modalities/fingerprint.html#output"
-  },"39": {
+  },"48": {
     "doc": "Fingerprint",
     "title": "Fingerprint",
     "content": ". | Overview | Examples of Fingerprint quality variation | Input | Output | . ",
     "url": "/modalities/fingerprint.html",
     
     "relUrl": "/modalities/fingerprint.html"
-  },"40": {
+  },"49": {
     "doc": "Framework",
     "title": "Framework",
     "content": ". | Framework . | Project Diagram . | bqcore | Interfaces | . | System Requirements . | Operating System | Runtime | Performance Benchmark | . | . | . ",
     "url": "/framework/",
     
     "relUrl": "/framework/"
-  },"41": {
+  },"50": {
     "doc": "Framework",
     "title": "Project Diagram",
     "content": "The openbq framework consists of the bqcore backend service, a command line interface, and a desktop app. --- title: openbq config: theme: neutral layout: elk --- graph TD core((bqcore service)) --&gt; cli(bqconnect CLI) core --&gt; gui(bqconnect Desktop) . bqcore . The core component of openbq implement various vendor algorithms, including face, fingerprint, iris and voice processing engines. It will analyse the input biometric files and produce the quality metrics. --- title: bqcore config: theme: neutral layout: elk --- graph LR input(Biometric files) --&gt; core{bqcore} core{bqcore} --&gt; face(Face) core{bqcore} --&gt; finger(Fingerprint) core{bqcore} --&gt; iris(Iris) core{bqcore} --&gt; speech(Speech) . Interfaces . bqcore service is exposed via command line interfaces. --- title: bqconnect CLI config: theme: neutral layout: elk --- graph LR input(Input Folder) --&gt; cli{Command Line} cli{Command Line} --&gt; report(EDA Report) cli{Command Line} --&gt; output(CSV) cli{Command Line} --&gt; log(Log) . | The bqconnect CLI provides terminal commands to interact with bqcore service. | It takes a folder in your file system as input and produces the raw metrics in CSV along with a EDA report. | It is distributed as Docker container as well as a Python entry point application. | . ",
     "url": "/framework/#project-diagram",
     
     "relUrl": "/framework/#project-diagram"
-  },"42": {
+  },"51": {
     "doc": "Framework",
     "title": "System Requirements",
     "content": "Operating System . | x86, ARM platform | Linux, Windows, macOS | . Since data processing is compute-intensive, you may want to allocate more cpu/memory with the host machine for better performance and stability. Runtime . openbq deliverables are packaged as Docker containers, you will need Docker engine to host the container. Performance Benchmark . Test Platform 1: 6/12 cores, amd64, Ubtuntu 25.10, 16 GB of RAM. | Mode | Throughput (per second) | (per hour) | . | Face (openbq) | 9.86 | 35,496 | . | Face (OFIQ) | 1.02 | 3,672 | . | Face (BIQT) | 3.75 | 13,500 | . | Fingerprint (NFIQ2) | 7.16 | 25,776 | . | Iris (BIQT) | 18.63 | 67,068 | . | Speech (NISQA) | 0.77 | 2,772 | . Test Platform 2: 14 cores, arm64, macOS 15.6.1, 32 GB of RAM. | Mode | Throughput (per second) | (per hour) | . | Face (openbq) | 53.94 | 194,184 | . | Face (OFIQ) | 2.08 | 7,488 | . | Face (BIQT) | 8.54 | 30,744 | . | Fingerprint (NFIQ2) | 14.54 | 52,344 | . | Iris (BIQT) | 40.14 | 144,504 | . | Speech (NISQA) | 1.50 | 5,400 | . As new quality metrics added to the engine, the benchmark number above might not reflect the current status of the project. ",
     "url": "/framework/#system-requirements",
     
     "relUrl": "/framework/#system-requirements"
-  },"43": {
+  },"52": {
     "doc": "Getting Started",
     "title": "Environments",
     "content": "Prerequisites: . | Docker | . ",
     "url": "/getting_started/getting_started.html#environments",
     
     "relUrl": "/getting_started/getting_started.html#environments"
-  },"44": {
+  },"53": {
     "doc": "Getting Started",
     "title": "Quick Start",
     "content": "Run openbq in the terminal . | Command Line Tool . | Set Up | Usage | Output | . | . ",
     "url": "/getting_started/getting_started.html#quick-start",
     
     "relUrl": "/getting_started/getting_started.html#quick-start"
-  },"45": {
+  },"54": {
     "doc": "Getting Started",
     "title": "Getting Started",
     "content": " ",
     "url": "/getting_started/getting_started.html",
     
     "relUrl": "/getting_started/getting_started.html"
-  },"46": {
+  },"55": {
+    "doc": "GitHub Workflow",
+    "title": "GitHub Workflow",
+    "content": " ",
+    "url": "/contribute/github-workflow/",
+    
+    "relUrl": "/contribute/github-workflow/"
+  },"56": {
+    "doc": "GitHub Workflow",
+    "title": "1. Fork and clone",
+    "content": "Fork the repository on GitHub, then clone your fork: . git clone https://github.com/&lt;your-username&gt;/&lt;repo-name&gt;.git cd &lt;repo-name&gt; git remote add upstream https://github.com/Open-Source-Biometric-Quality-Framework/&lt;repo-name&gt;.git . ",
+    "url": "/contribute/github-workflow/#1-fork-and-clone",
+    
+    "relUrl": "/contribute/github-workflow/#1-fork-and-clone"
+  },"57": {
+    "doc": "GitHub Workflow",
+    "title": "2. Create a branch",
+    "content": "Always branch from the latest main: . git fetch upstream git checkout -b &lt;branch-name&gt; upstream/main . Use a descriptive name, e.g. fix/fingerprint-threshold or docs/install-guide. ",
+    "url": "/contribute/github-workflow/#2-create-a-branch",
+    
+    "relUrl": "/contribute/github-workflow/#2-create-a-branch"
+  },"58": {
+    "doc": "GitHub Workflow",
+    "title": "3. Make your changes and sign off",
+    "content": "All commits must be signed off under the Developer Certificate of Origin: . git add . git commit -s -m \"Describe your change\" . ",
+    "url": "/contribute/github-workflow/#3-make-your-changes-and-sign-off",
+    
+    "relUrl": "/contribute/github-workflow/#3-make-your-changes-and-sign-off"
+  },"59": {
+    "doc": "GitHub Workflow",
+    "title": "4. Push to your fork",
+    "content": "git push -u origin &lt;branch-name&gt; . ",
+    "url": "/contribute/github-workflow/#4-push-to-your-fork",
+    
+    "relUrl": "/contribute/github-workflow/#4-push-to-your-fork"
+  },"60": {
+    "doc": "GitHub Workflow",
+    "title": "5. Open a pull request",
+    "content": "On GitHub, open a pull request from your branch to main in the OpenBQ repository. Describe what changed and why, and link any related issues. A maintainer will review it and may request changes before merging. ",
+    "url": "/contribute/github-workflow/#5-open-a-pull-request",
+    
+    "relUrl": "/contribute/github-workflow/#5-open-a-pull-request"
+  },"61": {
     "doc": "Introduction",
     "title": "Overview",
     "content": "OpenBQ (Open Source Biometric Quality Framework) is an open source biometric quality assessment tool for generating and analyzing biometric samples’ quality against international standards as well as customized metrics. openbq functions by taking an input directory of biometric data and producing raw quality information and an analysis report. The quality of biometric samples is a key aspect of the performance and efficacy of a biometric system. Whilst there are a variety of tools suitable for each modality, this project is aimed to provide an open source framework to support all common modalities and allow for expansion as new methods are developed. --- config: theme: neutral layout: elk --- graph LR subgraph title [ ] core[bqcore] --&gt; face(\"`__Face__`\") core --&gt; finger(\"`__Fingerprint__`\") core --&gt; iris(\"`__Iris__`\") core --&gt; voice(\"`__Voice__`\") finger --&gt; nfiq([NFIQ2]) iris --&gt; biqt-iris([BIQT]) face --&gt; obqe([OBQE]) face --&gt; ofiq([OFIQ]) face --&gt; biqt-face([BIQT]) voice --&gt; nisqa([NISQA]) end title --&gt; cli([bqconnect CLI]) title --&gt; desktop([bqconnect Desktop]) click finger \"http://docs.openbq.io/modalities/fingerprint.html\" _blank click face \"http://docs.openbq.io/modalities/face.html\" _blank click iris \"http://docs.openbq.io/modalities/iris.html\" _blank click voice \"http://docs.openbq.io/modalities/voice.html\" _blank click cli \"https://github.com/Open-Source-Biometric-Quality-Framework/bqConnect-CLI\" _blank click service \"https://github.com/Open-Source-Biometric-Quality-Framework/bqCore-Service\" _blank click gui \"https://github.com/Open-Source-Biometric-Quality-Framework/bqConnect-Desktop\" _blank click nfiq \"https://github.com/usnistgov/NFIQ2\" _blank click biqt-face \"https://github.com/mitre/biqt-face\" _blank click biqt-iris \"https://github.com/mitre/biqt-iris\" _blank click obqe \"https://github.com/Open-Source-Biometric-Quality-Framework\" _blank click ofiq \"https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Freie-Software/OFIQ/OFIQ_node.html\" _blank click nisqa \"https://github.com/gabrielmittag/NISQA\" _blank . ",
     "url": "/#overview",
     
     "relUrl": "/#overview"
-  },"47": {
+  },"62": {
     "doc": "Introduction",
     "title": "Modalities",
     "content": ". | Fingerprint . The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features. The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. | Face . The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. | Iris . The iris sample assessment module provides various quality attributes, features, and ISO metrics. | Voice . The voice assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. | . Key features of the project . | Biometrics quality assessment platform for different modalities and processing engines | A variety of different methods of access, including via CLI, web page and/or web API | Simple installation via Docker | Quality report | Built by an experienced biometric consulting team | An active open-source community | . Supporting libraries . | NFIQ2 | OFIQ | BIQT | MediaPipe | NISQA | . ",
     "url": "/#modalities",
     
     "relUrl": "/#modalities"
-  },"48": {
+  },"63": {
     "doc": "Introduction",
     "title": "The Toolbox",
     "content": ". | CLI . OpenBQ in the terminal. A CLI tool for easy biometric quality assessment. | . ",
     "url": "/#the-toolbox",
     
     "relUrl": "/#the-toolbox"
-  },"49": {
+  },"64": {
     "doc": "Introduction",
     "title": "Roadmap",
     "content": "Coming soon 🚀 . Please contact us if you’d like more information. ",
     "url": "/#roadmap",
     
     "relUrl": "/#roadmap"
-  },"50": {
+  },"65": {
     "doc": "Introduction",
     "title": "Introduction",
     "content": ". Releases . OpenBQ v0.1.3 released!🎉 . by Biometix . ",
     "url": "/",
     
     "relUrl": "/"
-  },"51": {
+  },"66": {
+    "doc": "Contribute",
+    "title": "Contributor’s Guide",
+    "content": "OpenBQ is an open-source biometric quality framework developed and maintained by Biometix Pty Ltd. We welcome contributions from developers, testers, researchers and documentation writers. ",
+    "url": "/contribute/#contributors-guide",
+    
+    "relUrl": "/contribute/#contributors-guide"
+  },"67": {
+    "doc": "Contribute",
+    "title": "Where to start?",
+    "content": ". | Read the Getting Started guide to install and run OpenBQ. | Browse the repositories in the OpenBQ GitHub organisation. | Create a GitHub account if you don’t have one. | Read our Code of Conduct. | . ",
+    "url": "/contribute/#where-to-start",
+    
+    "relUrl": "/contribute/#where-to-start"
+  },"68": {
+    "doc": "Contribute",
+    "title": "Areas of contribution",
+    "content": "Code . | Fix bugs and implement new features | Add or improve quality metrics and modality support | Improve performance and integrations | . Testing . | Test OpenBQ on different datasets, platforms and environments | Report bugs with clear steps to reproduce | . Documentation . | Improve guides, tutorials and the cookbook | Fix errors and fill gaps in these docs | . Research and design . | Share feedback on quality measures and standards alignment | Propose enhancements through GitHub Issues | . ",
+    "url": "/contribute/#areas-of-contribution",
+    
+    "relUrl": "/contribute/#areas-of-contribution"
+  },"69": {
+    "doc": "Contribute",
+    "title": "Ready to fix an issue?",
+    "content": "Follow the GitHub Workflow to fork, branch, sign off your commits and raise a pull request. ",
+    "url": "/contribute/#ready-to-fix-an-issue",
+    
+    "relUrl": "/contribute/#ready-to-fix-an-issue"
+  },"70": {
+    "doc": "Contribute",
+    "title": "Found an issue or have an enhancement request?",
+    "content": "Open an issue in the relevant repository, following the Issue Reporting Guidelines. ",
+    "url": "/contribute/#found-an-issue-or-have-an-enhancement-request",
+    
+    "relUrl": "/contribute/#found-an-issue-or-have-an-enhancement-request"
+  },"71": {
+    "doc": "Contribute",
+    "title": "Licence",
+    "content": "OpenBQ is licensed under the Apache License 2.0. By contributing, you agree that your contributions are licensed under the same licence. Full guidelines are in CONTRIBUTING.md. ",
+    "url": "/contribute/#licence",
+    
+    "relUrl": "/contribute/#licence"
+  },"72": {
+    "doc": "Contribute",
+    "title": "Getting in touch",
+    "content": "For questions, open a GitHub Issue or Discussion, or contact [CONTACT EMAIL]. ",
+    "url": "/contribute/#getting-in-touch",
+    
+    "relUrl": "/contribute/#getting-in-touch"
+  },"73": {
+    "doc": "Contribute",
+    "title": "Contribute",
+    "content": " ",
+    "url": "/contribute/",
+    
+    "relUrl": "/contribute/"
+  },"74": {
     "doc": "Iris",
     "title": "Overview",
     "content": "The iris sample assessment module provides various quality attributes, features, and ISO metrics. ",
     "url": "/modalities/iris.html#overview",
     
     "relUrl": "/modalities/iris.html#overview"
-  },"52": {
+  },"75": {
     "doc": "Iris",
     "title": "Examples of Iris quality variation",
     "content": ". ",
     "url": "/modalities/iris.html#examples-of-iris-quality-variation",
     
     "relUrl": "/modalities/iris.html#examples-of-iris-quality-variation"
-  },"53": {
+  },"76": {
     "doc": "Iris",
     "title": "Input",
     "content": "Create a folder named data under your working directory, and put your iris images in this folder . ",
     "url": "/modalities/iris.html#input",
     
     "relUrl": "/modalities/iris.html#input"
-  },"54": {
+  },"77": {
     "doc": "Iris",
     "title": "Output",
     "content": "openbq will produce the quality scores generated by the engines as well as additional information in columns. It will be saved as CSV from CLI or JSON from API. Iris: . | Column | Description | . | quality | An overall quality score that leverages several statistics together | . | contrast | Raw score quantifying overall image contrast | . | sharpness | Raw score quantifying the sharpness of the image | . | iris_diameter | Raw diameter of the iris measured in pixels | . | percent_visible_iris | Percentage of visible iris area | . | iris_pupil_gs | Raw measure quantifying how distinguishable the boundary is between the pupil and the iris | . | iris_sclera_gs | Raw measure quantifying how distinguishable the boundary is between the iris and the sclera | . | iso_overall_quality | The overall ISO quality score based on the product of normalized individual iso metrics | . | iso_greyscale_utilization | The spread of intensity values regarding the pixel values within the iris portion of the image, recommended value: 6 or greater | . | iso_iris_pupil_concentricity | The degree to which the pupil centre and the iris centre are in the same location, recommended value: 90 or greater | . | iso_iris_pupil_contrast | The image characteristics at the boundary between the iris region and the pupil, recommended value: 30 or greater | . | iso_iris_pupil_ratio | The degree to which the pupil is dilated or constricted, recommended value: between 20 and 70 | . | iso_iris_sclera_contrast | The image characteristics at the boundary between the iris region and the sclera, recommended value: greater than 5 | . | iso_margin_adequacy | The degree to which the iris portion of the image is centred relative to the edges of the entire image, recommended value: greater than 80 | . | iso_pupil_boundary_circularity | The circularity of the iris-pupil boundary | . | iso_sharpness | The degree of focus present in the image | . | iso_usable_iris_area | The fraction of the iris portion of the image that is not occluded by eyelids, eyelashes, or specular reflections | . | image_width | Width of the input in pixels | . | image_height | Height of the input in pixels | . Iris Engine . ",
     "url": "/modalities/iris.html#output",
     
     "relUrl": "/modalities/iris.html#output"
-  },"55": {
+  },"78": {
     "doc": "Iris",
     "title": "Iris",
     "content": ". | Overview | Examples of Iris quality variation | Input | Output | . ",
     "url": "/modalities/iris.html",
     
     "relUrl": "/modalities/iris.html"
-  },"56": {
+  },"79": {
+    "doc": "Issue Reporting Guidelines",
+    "title": "Issue Reporting Guidelines",
+    "content": "Report bugs and enhancement requests as GitHub Issues in the relevant repository in the OpenBQ GitHub organisation. ",
+    "url": "/contribute/issue-reporting/",
+    
+    "relUrl": "/contribute/issue-reporting/"
+  },"80": {
+    "doc": "Issue Reporting Guidelines",
+    "title": "Before you report",
+    "content": ". | Search existing issues to check it hasn’t already been reported. | Make sure you are using the latest version. | . ",
+    "url": "/contribute/issue-reporting/#before-you-report",
+    
+    "relUrl": "/contribute/issue-reporting/#before-you-report"
+  },"81": {
+    "doc": "Issue Reporting Guidelines",
+    "title": "What to include",
+    "content": ". | Title: a short, clear summary of the problem | Repository and version you are using | Environment: operating system, Python version, Docker or local install | Steps to reproduce: numbered steps someone else can follow | Expected behaviour and actual behaviour | Logs or screenshots, where helpful (remove any personal or biometric data first) | . ",
+    "url": "/contribute/issue-reporting/#what-to-include",
+    
+    "relUrl": "/contribute/issue-reporting/#what-to-include"
+  },"82": {
+    "doc": "Issue Reporting Guidelines",
+    "title": "Enhancement requests",
+    "content": "Describe the problem you want solved, your proposed solution, and any alternatives you considered. ",
+    "url": "/contribute/issue-reporting/#enhancement-requests",
+    
+    "relUrl": "/contribute/issue-reporting/#enhancement-requests"
+  },"83": {
+    "doc": "Issue Reporting Guidelines",
+    "title": "Security vulnerabilities",
+    "content": "Do not report security vulnerabilities in public issues. Email [SECURITY CONTACT EMAIL] instead. ",
+    "url": "/contribute/issue-reporting/#security-vulnerabilities",
+    
+    "relUrl": "/contribute/issue-reporting/#security-vulnerabilities"
+  },"84": {
     "doc": "Limitations",
     "title": "Limitations",
     "content": "Memory Pressure . When processing a large dataset, you may encounter OOM issue, the worker will be restarted automatically and retry the job, but this will slow down your workflow. You could limit the memory or CPU available to Docker runtime or increase physical memory. Modify --cpus or --memory flags or in the Docker desktop app. Iris Sample Resizing . The size/resolution of the iris image will be rescaled for processing if out of range. When resized, the quality score might deviate from original input. For certain edge cases, the processing engine may fail to generate output. BIQT-Iris . ",
     "url": "/cookbook/limitation.html",
     
     "relUrl": "/cookbook/limitation.html"
-  },"57": {
+  },"85": {
     "doc": "Modalities",
     "title": "Modalities",
     "content": ". | Fingerprint | . The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features. The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. | Face | . The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. | Iris | . The iris sample assessment module provides various quality attributes, features, and ISO metrics. | Speech | . The speech assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. ",
     "url": "/modalities/modalities.html",
     
     "relUrl": "/modalities/modalities.html"
-  },"58": {
+  },"86": {
     "doc": "RELEASE NOTES",
     "title": "RELEASE NOTES",
     "content": ". | RELEASE NOTES . | BQCore Service . | v0.1.3 (2026-10-08) 🆕 | . | . | . ",
     "url": "/releasenotes/",
     
     "relUrl": "/releasenotes/"
-  },"59": {
+  },"87": {
     "doc": "RELEASE NOTES",
     "title": "BQCore Service",
     "content": ". v0.1.3 (2026-10-08) 🆕 . 🚀 Engines . | OBQE: v1.6.5 (557b77b) | OFIQ: v1.1.1 (2eb26a3) –&gt; v1.2.0 (d9beef8) | NFIQ2: v2.3.0 (76b8c4e) | BIQT: v26.04 (84485d5) | NISQA: latest (fe84f0f) | . v0.1.0 (2026-02-06) . 🚀 Engines . | OBQE: v1.6.5 (557b77b) | OFIQ: v1.1.1 (2eb26a3) | NFIQ2: v2.3.0 (76b8c4e) | BIQT: v26.04 (84485d5) | NISQA: latest (fe84f0f) | . ",
     "url": "/releasenotes/#bqcore-service",
     
     "relUrl": "/releasenotes/#bqcore-service"
-  },"60": {
+  },"88": {
     "doc": "Voice",
     "title": "Overview",
     "content": "The speech assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. ",
     "url": "/modalities/voice.html#overview",
     
     "relUrl": "/modalities/voice.html#overview"
-  },"61": {
+  },"89": {
     "doc": "Voice",
     "title": "Input",
     "content": "Create a folder named data under your working directory and put your audio files in this folder. Suported file formats: . | wav | . Due to algorithm limitation, sub-folder might not work as expected. If your folder with audio files is in data/speech/, files in data/speech/audio/ won’t be processed. ",
     "url": "/modalities/voice.html#input",
     
     "relUrl": "/modalities/voice.html#input"
-  },"62": {
+  },"90": {
     "doc": "Voice",
     "title": "Output",
     "content": "openbq will produce the quality scores generated by the engines as well as additional information in columns. It will be saved as CSV from CLI or JSON from API. Speech: . | Column | Description | . | quality | Overall quality estimation of the speech audio file. | . | noisiness | Quality degradation such as background, circuit, or coding noise. | . | discontinuity | Quality degradation caused by isolated or non-stationary distortions, e.g. introduced by packet-loss or clipping. | . | coloration | Quality degradation caused by frequency response distortions, e.g. introduced by bandwidth limitation, low bitrate codecs, or packet-loss concealment. | . | loudness | Influence of the loudness on the perceived quality of transmitted speech. | . | naturalness | Estimation of the naturalness of synthetic speech. | . NISQA Model . ",
     "url": "/modalities/voice.html#output",
     
     "relUrl": "/modalities/voice.html#output"
-  },"63": {
+  },"91": {
     "doc": "Voice",
     "title": "Voice",
     "content": ". | Overview | Input | Output | . ",
