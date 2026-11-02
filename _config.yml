@@ -18,6 +18,7 @@ mermaid:
 
 back_to_top: true
 back_to_top_text: "Back to top"
+footer_content: "Copyright &copy; 2026 Biometix Pty Ltd. OpenBQ is open source under the Apache License 2.0."
 heading_anchors: true
 enable_copy_code_button: true
 highlighter: rouge
