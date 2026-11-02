@@ -82,6 +82,60 @@ graph LR
 + It takes a folder in your file system as input and produces the raw metrics in CSV along with a EDA report.
 
 + It is distributed as Docker container as well as a Python entry point application.
+## Solution Architecture
+
+``` mermaid
+---
+title: BQAT Core
+config:
+  theme: neutral
+  layout: elk
+---
+flowchart TD
+ subgraph s1["Python Package"]
+    n0["Python Interface"]
+    n0 --> n1["Face Engines"]
+    n1 --> a1["Biometix"]
+    n1 --> a2["OFIQ"]
+    n1 --> a3["BIQT"]
+    n0 --> n2["Iris Engine"]
+    n2 --> a4["BIQT"]
+    n0 --> n3["Fingerprint Engine"]
+    n3 --> a5["NFIQ2"]
+    n0 --> n4["Voice Engine"]
+    n4 --> a6["NISQA"]
+  end
+```
+
+---
+``` mermaid
+---
+title: BQAT CLI
+config:
+  theme: neutral
+  layout: elk
+---
+flowchart TD
+  subgraph s1["Docker Container"]
+    n0["BQAT-Core"] --> n1["Ray Parallel Processing Framework"]
+    n1 --> n2["Python Interface"]
+  end
+  s1 --> n3["Python CLI Commands"]
+```
+
+---
+``` mermaid
+---
+title: BQ-Desktop
+config:
+  theme: neutral
+  layout: elk
+---
+flowchart LR
+  subgraph s1["Docker Compose Stack"]
+    n1["Vue.js Web Application"] --> n2["BQAT-API"]
+  end
+```
 
 
 ## System Requirements

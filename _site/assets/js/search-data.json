@@ -442,298 +442,305 @@
   },"63": {
     "doc": "Framework",
     "title": "Framework",
-    "content": ". | Framework . | Project Diagram . | bqcore | Interfaces | . | System Requirements . | Operating System | Runtime | Performance Benchmark | . | . | . ",
+    "content": ". | Framework . | Project Diagram . | bqcore | Interfaces | . | Solution Architecture | System Requirements . | Operating System | Runtime | Performance Benchmark | . | . | . ",
     "url": "/framework/",
     
     "relUrl": "/framework/"
   },"64": {
     "doc": "Framework",
     "title": "Project Diagram",
-    "content": "The openbq framework consists of the bqcore backend service, a command line interface, and a desktop app. --- title: openbq config: theme: neutral layout: elk --- graph TD core((bqcore service)) --&gt; cli(bqconnect CLI) core --&gt; gui(bqconnect Desktop) . bqcore . The core component of openbq implement various vendor algorithms, including face, fingerprint, iris and voice processing engines. It will analyse the input biometric files and produce the quality metrics. --- title: bqcore config: theme: neutral layout: elk --- graph LR input(Biometric files) --&gt; core{bqcore} core{bqcore} --&gt; face(Face) core{bqcore} --&gt; finger(Fingerprint) core{bqcore} --&gt; iris(Iris) core{bqcore} --&gt; speech(Speech) . Interfaces . bqcore service is exposed via command line interfaces. --- title: bqconnect CLI config: theme: neutral layout: elk --- graph LR input(Input Folder) --&gt; cli{Command Line} cli{Command Line} --&gt; report(EDA Report) cli{Command Line} --&gt; output(CSV) cli{Command Line} --&gt; log(Log) . | The bqconnect CLI provides terminal commands to interact with bqcore service. | It takes a folder in your file system as input and produces the raw metrics in CSV along with a EDA report. | It is distributed as Docker container as well as a Python entry point application. | . ",
+    "content": "The openbq framework consists of the bqcore backend service, a command line interface, and a desktop app. --- title: openbq config: theme: neutral layout: elk --- graph TD core((bqcore service)) --&gt; cli(bqconnect CLI) core --&gt; gui(bqconnect Desktop) . bqcore . The core component of openbq implement various vendor algorithms, including face, fingerprint, iris and voice processing engines. It will analyse the input biometric files and produce the quality metrics. --- title: bqcore config: theme: neutral layout: elk --- graph LR input(Biometric files) --&gt; core{bqcore} core{bqcore} --&gt; face(Face) core{bqcore} --&gt; finger(Fingerprint) core{bqcore} --&gt; iris(Iris) core{bqcore} --&gt; speech(Speech) . Interfaces . bqcore service is exposed via command line interfaces. --- title: bqconnect CLI config: theme: neutral layout: elk --- graph LR input(Input Folder) --&gt; cli{Command Line} cli{Command Line} --&gt; report(EDA Report) cli{Command Line} --&gt; output(CSV) cli{Command Line} --&gt; log(Log) . | The bqconnect CLI provides terminal commands to interact with bqcore service. | It takes a folder in your file system as input and produces the raw metrics in CSV along with a EDA report. | It is distributed as Docker container as well as a Python entry point application. ",
     "url": "/framework/#project-diagram",
     
     "relUrl": "/framework/#project-diagram"
   },"65": {
+    "doc": "Framework",
+    "title": "Solution Architecture",
+    "content": "| . --- title: BQAT Core config: theme: neutral layout: elk --- flowchart TD subgraph s1[\"Python Package\"] n0[\"Python Interface\"] n0 --&gt; n1[\"Face Engines\"] n1 --&gt; a1[\"Biometix\"] n1 --&gt; a2[\"OFIQ\"] n1 --&gt; a3[\"BIQT\"] n0 --&gt; n2[\"Iris Engine\"] n2 --&gt; a4[\"BIQT\"] n0 --&gt; n3[\"Fingerprint Engine\"] n3 --&gt; a5[\"NFIQ2\"] n0 --&gt; n4[\"Voice Engine\"] n4 --&gt; a6[\"NISQA\"] end . --- title: BQAT CLI config: theme: neutral layout: elk --- flowchart TD subgraph s1[\"Docker Container\"] n0[\"BQAT-Core\"] --&gt; n1[\"Ray Parallel Processing Framework\"] n1 --&gt; n2[\"Python Interface\"] end s1 --&gt; n3[\"Python CLI Commands\"] . --- title: BQ-Desktop config: theme: neutral layout: elk --- flowchart LR subgraph s1[\"Docker Compose Stack\"] n1[\"Vue.js Web Application\"] --&gt; n2[\"BQAT-API\"] end . ",
+    "url": "/framework/#solution-architecture",
+    
+    "relUrl": "/framework/#solution-architecture"
+  },"66": {
     "doc": "Framework",
     "title": "System Requirements",
     "content": "Operating System . | x86, ARM platform | Linux, Windows, macOS | . Since data processing is compute-intensive, you may want to allocate more cpu/memory with the host machine for better performance and stability. Runtime . openbq deliverables are packaged as Docker containers, you will need Docker engine to host the container. Performance Benchmark . Test Platform 1: 6/12 cores, amd64, Ubtuntu 25.10, 16 GB of RAM. | Mode | Throughput (per second) | (per hour) | . | Face (openbq) | 9.86 | 35,496 | . | Face (OFIQ) | 1.02 | 3,672 | . | Face (BIQT) | 3.75 | 13,500 | . | Fingerprint (NFIQ2) | 7.16 | 25,776 | . | Iris (BIQT) | 18.63 | 67,068 | . | Speech (NISQA) | 0.77 | 2,772 | . Test Platform 2: 14 cores, arm64, macOS 15.6.1, 32 GB of RAM. | Mode | Throughput (per second) | (per hour) | . | Face (openbq) | 53.94 | 194,184 | . | Face (OFIQ) | 2.08 | 7,488 | . | Face (BIQT) | 8.54 | 30,744 | . | Fingerprint (NFIQ2) | 14.54 | 52,344 | . | Iris (BIQT) | 40.14 | 144,504 | . | Speech (NISQA) | 1.50 | 5,400 | . As new quality metrics added to the engine, the benchmark number above might not reflect the current status of the project. ",
     "url": "/framework/#system-requirements",
     
     "relUrl": "/framework/#system-requirements"
-  },"66": {
+  },"67": {
     "doc": "Getting Started",
     "title": "Environments",
     "content": "Prerequisites: . | Docker | . ",
     "url": "/getting_started/getting_started.html#environments",
     
     "relUrl": "/getting_started/getting_started.html#environments"
-  },"67": {
+  },"68": {
     "doc": "Getting Started",
     "title": "Quick Start",
     "content": "Run openbq in the terminal . | Command Line Tool . | Set Up | Usage | Output | . | . ",
     "url": "/getting_started/getting_started.html#quick-start",
     
     "relUrl": "/getting_started/getting_started.html#quick-start"
-  },"68": {
+  },"69": {
     "doc": "Getting Started",
     "title": "Getting Started",
     "content": " ",
     "url": "/getting_started/getting_started.html",
     
     "relUrl": "/getting_started/getting_started.html"
-  },"69": {
+  },"70": {
     "doc": "GitHub Workflow",
     "title": "GitHub Workflow",
     "content": " ",
     "url": "/contribute/github-workflow/",
     
     "relUrl": "/contribute/github-workflow/"
-  },"70": {
+  },"71": {
     "doc": "GitHub Workflow",
     "title": "1. Fork and clone",
     "content": "Fork the repository on GitHub, then clone your fork: . git clone https://github.com/&lt;your-username&gt;/&lt;repo-name&gt;.git cd &lt;repo-name&gt; git remote add upstream https://github.com/Open-Source-Biometric-Quality-Framework/&lt;repo-name&gt;.git . ",
     "url": "/contribute/github-workflow/#1-fork-and-clone",
     
     "relUrl": "/contribute/github-workflow/#1-fork-and-clone"
-  },"71": {
+  },"72": {
     "doc": "GitHub Workflow",
     "title": "2. Create a branch",
     "content": "Always branch from the latest main: . git fetch upstream git checkout -b &lt;branch-name&gt; upstream/main . Use a descriptive name, e.g. fix/fingerprint-threshold or docs/install-guide. ",
     "url": "/contribute/github-workflow/#2-create-a-branch",
     
     "relUrl": "/contribute/github-workflow/#2-create-a-branch"
-  },"72": {
+  },"73": {
     "doc": "GitHub Workflow",
     "title": "3. Make your changes and sign off",
     "content": "All commits must be signed off under the Developer Certificate of Origin: . git add . git commit -s -m \"Describe your change\" . ",
     "url": "/contribute/github-workflow/#3-make-your-changes-and-sign-off",
     
     "relUrl": "/contribute/github-workflow/#3-make-your-changes-and-sign-off"
-  },"73": {
+  },"74": {
     "doc": "GitHub Workflow",
     "title": "4. Push to your fork",
     "content": "git push -u origin &lt;branch-name&gt; . ",
     "url": "/contribute/github-workflow/#4-push-to-your-fork",
     
     "relUrl": "/contribute/github-workflow/#4-push-to-your-fork"
-  },"74": {
+  },"75": {
     "doc": "GitHub Workflow",
     "title": "5. Open a pull request",
     "content": "On GitHub, open a pull request from your branch to main in the OpenBQ repository. Describe what changed and why, and link any related issues. A maintainer will review it and may request changes before merging. ",
     "url": "/contribute/github-workflow/#5-open-a-pull-request",
     
     "relUrl": "/contribute/github-workflow/#5-open-a-pull-request"
-  },"75": {
+  },"76": {
     "doc": "Contribute",
     "title": "Contributor’s Guide",
     "content": "OpenBQ is an open-source biometric quality framework developed and maintained by Biometix Pty Ltd. We welcome contributions from developers, testers, researchers and documentation writers. ",
     "url": "/contribute/#contributors-guide",
     
     "relUrl": "/contribute/#contributors-guide"
-  },"76": {
+  },"77": {
     "doc": "Contribute",
     "title": "Where to start?",
     "content": ". | Read the Getting Started guide to install and run OpenBQ. | Browse the repositories in the OpenBQ GitHub organisation. | Create a GitHub account if you don’t have one. | Read our Code of Conduct. | . ",
     "url": "/contribute/#where-to-start",
     
     "relUrl": "/contribute/#where-to-start"
-  },"77": {
+  },"78": {
     "doc": "Contribute",
     "title": "Areas of contribution",
     "content": "Code . | Fix bugs and implement new features | Add or improve quality metrics and modality support | Improve performance and integrations | . Testing . | Test OpenBQ on different datasets, platforms and environments | Report bugs with clear steps to reproduce | . Documentation . | Improve guides, tutorials and the cookbook | Fix errors and fill gaps in these docs | . Research and design . | Share feedback on quality measures and standards alignment | Propose enhancements through GitHub Issues | . ",
     "url": "/contribute/#areas-of-contribution",
     
     "relUrl": "/contribute/#areas-of-contribution"
-  },"78": {
+  },"79": {
     "doc": "Contribute",
     "title": "Ready to fix an issue?",
     "content": "Follow the GitHub Workflow to fork, branch, sign off your commits and raise a pull request. ",
     "url": "/contribute/#ready-to-fix-an-issue",
     
     "relUrl": "/contribute/#ready-to-fix-an-issue"
-  },"79": {
+  },"80": {
     "doc": "Contribute",
     "title": "Found an issue or have an enhancement request?",
     "content": "Open an issue in the relevant repository, following the Issue Reporting Guidelines. ",
     "url": "/contribute/#found-an-issue-or-have-an-enhancement-request",
     
     "relUrl": "/contribute/#found-an-issue-or-have-an-enhancement-request"
-  },"80": {
+  },"81": {
     "doc": "Contribute",
     "title": "Licence",
     "content": "OpenBQ is licensed under the Apache License 2.0. By contributing, you agree that your contributions are licensed under the same licence. Full guidelines are in CONTRIBUTING.md. ",
     "url": "/contribute/#licence",
     
     "relUrl": "/contribute/#licence"
-  },"81": {
+  },"82": {
     "doc": "Contribute",
     "title": "Getting in touch",
     "content": "For questions, open a GitHub Issue or Discussion, or contact [CONTACT EMAIL]. ",
     "url": "/contribute/#getting-in-touch",
     
     "relUrl": "/contribute/#getting-in-touch"
-  },"82": {
+  },"83": {
     "doc": "Contribute",
     "title": "Contribute",
     "content": " ",
     "url": "/contribute/",
     
     "relUrl": "/contribute/"
-  },"83": {
+  },"84": {
     "doc": "Introduction",
     "title": "Overview",
     "content": "OpenBQ (Open Source Biometric Quality Framework) is an open source biometric quality assessment tool for generating and analyzing biometric samples’ quality against international standards as well as customized metrics. openbq functions by taking an input directory of biometric data and producing raw quality information and an analysis report. The quality of biometric samples is a key aspect of the performance and efficacy of a biometric system. Whilst there are a variety of tools suitable for each modality, this project is aimed to provide an open source framework to support all common modalities and allow for expansion as new methods are developed. --- config: theme: neutral layout: elk --- graph LR subgraph title [ ] core[bqcore] --&gt; face(\"`__Face__`\") core --&gt; finger(\"`__Fingerprint__`\") core --&gt; iris(\"`__Iris__`\") core --&gt; voice(\"`__Voice__`\") finger --&gt; nfiq([NFIQ2]) iris --&gt; biqt-iris([BIQT]) face --&gt; obqe([OBQE]) face --&gt; ofiq([OFIQ]) face --&gt; biqt-face([BIQT]) voice --&gt; nisqa([NISQA]) end title --&gt; cli([bqconnect CLI]) title --&gt; desktop([bqconnect Desktop]) click finger \"http://docs.openbq.io/modalities/fingerprint.html\" _blank click face \"http://docs.openbq.io/modalities/face.html\" _blank click iris \"http://docs.openbq.io/modalities/iris.html\" _blank click voice \"http://docs.openbq.io/modalities/voice.html\" _blank click cli \"https://github.com/Open-Source-Biometric-Quality-Framework/bqConnect-CLI\" _blank click service \"https://github.com/Open-Source-Biometric-Quality-Framework/bqCore-Service\" _blank click gui \"https://github.com/Open-Source-Biometric-Quality-Framework/bqConnect-Desktop\" _blank click nfiq \"https://github.com/usnistgov/NFIQ2\" _blank click biqt-face \"https://github.com/mitre/biqt-face\" _blank click biqt-iris \"https://github.com/mitre/biqt-iris\" _blank click obqe \"https://github.com/Open-Source-Biometric-Quality-Framework\" _blank click ofiq \"https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Freie-Software/OFIQ/OFIQ_node.html\" _blank click nisqa \"https://github.com/gabrielmittag/NISQA\" _blank . ",
     "url": "/#overview",
     
     "relUrl": "/#overview"
-  },"84": {
+  },"85": {
     "doc": "Introduction",
     "title": "Modalities",
     "content": ". | Fingerprint . The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features. The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. | Face . The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. | Iris . The iris sample assessment module provides various quality attributes, features, and ISO metrics. | Voice . The voice assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. | . Key features of the project . | Biometrics quality assessment platform for different modalities and processing engines | A variety of different methods of access, including via CLI, web page and/or web API | Simple installation via Docker | Quality report | Built by an experienced biometric consulting team | An active open-source community | . Supporting libraries . | NFIQ2 | OFIQ | BIQT | MediaPipe | NISQA | . ",
     "url": "/#modalities",
     
     "relUrl": "/#modalities"
-  },"85": {
+  },"86": {
     "doc": "Introduction",
     "title": "The Toolbox",
     "content": ". | CLI . OpenBQ in the terminal. A CLI tool for easy biometric quality assessment. | . ",
     "url": "/#the-toolbox",
     
     "relUrl": "/#the-toolbox"
-  },"86": {
+  },"87": {
     "doc": "Introduction",
     "title": "Roadmap",
     "content": "Coming soon 🚀 . Please contact us if you’d like more information. ",
     "url": "/#roadmap",
     
     "relUrl": "/#roadmap"
-  },"87": {
+  },"88": {
     "doc": "Introduction",
     "title": "Introduction",
     "content": ". Releases . OpenBQ v0.1.3 released!🎉 . by Biometix . ",
     "url": "/",
     
     "relUrl": "/"
-  },"88": {
+  },"89": {
     "doc": "Iris",
     "title": "Overview",
     "content": "The iris sample assessment module provides various quality attributes, features, and ISO metrics. ",
     "url": "/modalities/iris.html#overview",
     
     "relUrl": "/modalities/iris.html#overview"
-  },"89": {
+  },"90": {
     "doc": "Iris",
     "title": "Examples of Iris quality variation",
     "content": ". ",
     "url": "/modalities/iris.html#examples-of-iris-quality-variation",
     
     "relUrl": "/modalities/iris.html#examples-of-iris-quality-variation"
-  },"90": {
+  },"91": {
     "doc": "Iris",
     "title": "Input",
     "content": "Create a folder named data under your working directory, and put your iris images in this folder . ",
     "url": "/modalities/iris.html#input",
     
     "relUrl": "/modalities/iris.html#input"
-  },"91": {
+  },"92": {
     "doc": "Iris",
     "title": "Output",
     "content": "openbq will produce the quality scores generated by the engines as well as additional information in columns. It will be saved as CSV from CLI or JSON from API. Iris: . | Column | Description | . | quality | An overall quality score that leverages several statistics together | . | contrast | Raw score quantifying overall image contrast | . | sharpness | Raw score quantifying the sharpness of the image | . | iris_diameter | Raw diameter of the iris measured in pixels | . | percent_visible_iris | Percentage of visible iris area | . | iris_pupil_gs | Raw measure quantifying how distinguishable the boundary is between the pupil and the iris | . | iris_sclera_gs | Raw measure quantifying how distinguishable the boundary is between the iris and the sclera | . | iso_overall_quality | The overall ISO quality score based on the product of normalized individual iso metrics | . | iso_greyscale_utilization | The spread of intensity values regarding the pixel values within the iris portion of the image, recommended value: 6 or greater | . | iso_iris_pupil_concentricity | The degree to which the pupil centre and the iris centre are in the same location, recommended value: 90 or greater | . | iso_iris_pupil_contrast | The image characteristics at the boundary between the iris region and the pupil, recommended value: 30 or greater | . | iso_iris_pupil_ratio | The degree to which the pupil is dilated or constricted, recommended value: between 20 and 70 | . | iso_iris_sclera_contrast | The image characteristics at the boundary between the iris region and the sclera, recommended value: greater than 5 | . | iso_margin_adequacy | The degree to which the iris portion of the image is centred relative to the edges of the entire image, recommended value: greater than 80 | . | iso_pupil_boundary_circularity | The circularity of the iris-pupil boundary | . | iso_sharpness | The degree of focus present in the image | . | iso_usable_iris_area | The fraction of the iris portion of the image that is not occluded by eyelids, eyelashes, or specular reflections | . | image_width | Width of the input in pixels | . | image_height | Height of the input in pixels | . Iris Engine . ",
     "url": "/modalities/iris.html#output",
     
     "relUrl": "/modalities/iris.html#output"
-  },"92": {
+  },"93": {
     "doc": "Iris",
     "title": "Iris",
     "content": ". | Overview | Examples of Iris quality variation | Input | Output | . ",
     "url": "/modalities/iris.html",
     
     "relUrl": "/modalities/iris.html"
-  },"93": {
+  },"94": {
     "doc": "Issue Reporting Guidelines",
     "title": "Issue Reporting Guidelines",
     "content": "Report bugs and enhancement requests as GitHub Issues in the relevant repository in the OpenBQ GitHub organisation. ",
     "url": "/contribute/issue-reporting/",
     
     "relUrl": "/contribute/issue-reporting/"
-  },"94": {
+  },"95": {
     "doc": "Issue Reporting Guidelines",
     "title": "Before you report",
     "content": ". | Search existing issues to check it hasn’t already been reported. | Make sure you are using the latest version. | . ",
     "url": "/contribute/issue-reporting/#before-you-report",
     
     "relUrl": "/contribute/issue-reporting/#before-you-report"
-  },"95": {
+  },"96": {
     "doc": "Issue Reporting Guidelines",
     "title": "What to include",
     "content": ". | Title: a short, clear summary of the problem | Repository and version you are using | Environment: operating system, Python version, Docker or local install | Steps to reproduce: numbered steps someone else can follow | Expected behaviour and actual behaviour | Logs or screenshots, where helpful (remove any personal or biometric data first) | . ",
     "url": "/contribute/issue-reporting/#what-to-include",
     
     "relUrl": "/contribute/issue-reporting/#what-to-include"
-  },"96": {
+  },"97": {
     "doc": "Issue Reporting Guidelines",
     "title": "Enhancement requests",
     "content": "Describe the problem you want solved, your proposed solution, and any alternatives you considered. ",
     "url": "/contribute/issue-reporting/#enhancement-requests",
     
     "relUrl": "/contribute/issue-reporting/#enhancement-requests"
-  },"97": {
+  },"98": {
     "doc": "Issue Reporting Guidelines",
     "title": "Security vulnerabilities",
     "content": "Do not report security vulnerabilities in public issues. Email [SECURITY CONTACT EMAIL] instead. ",
     "url": "/contribute/issue-reporting/#security-vulnerabilities",
     
     "relUrl": "/contribute/issue-reporting/#security-vulnerabilities"
-  },"98": {
+  },"99": {
     "doc": "Limitations",
     "title": "Limitations",
     "content": "Memory Pressure . When processing a large dataset, you may encounter OOM issue, the worker will be restarted automatically and retry the job, but this will slow down your workflow. You could limit the memory or CPU available to Docker runtime or increase physical memory. Modify --cpus or --memory flags or in the Docker desktop app. Iris Sample Resizing . The size/resolution of the iris image will be rescaled for processing if out of range. When resized, the quality score might deviate from original input. For certain edge cases, the processing engine may fail to generate output. BIQT-Iris . ",
     "url": "/cookbook/limitation.html",
     
     "relUrl": "/cookbook/limitation.html"
-  },"99": {
+  },"100": {
     "doc": "Modalities",
     "title": "Modalities",
     "content": ". | Fingerprint | . The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features. The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. | Face | . The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. | Iris | . The iris sample assessment module provides various quality attributes, features, and ISO metrics. | Speech | . The speech assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. ",
     "url": "/modalities/modalities.html",
     
     "relUrl": "/modalities/modalities.html"
-  },"100": {
+  },"101": {
     "doc": "RELEASE NOTES",
     "title": "RELEASE NOTES",
     "content": ". | RELEASE NOTES . | BQCore Service . | v0.1.3 (2026-10-08) 🆕 | . | . | . ",
     "url": "/releasenotes/",
     
     "relUrl": "/releasenotes/"
-  },"101": {
+  },"102": {
     "doc": "RELEASE NOTES",
     "title": "BQCore Service",
     "content": ". v0.1.3 (2026-10-08) 🆕 . 🚀 Engines . | OBQE: v1.6.5 (557b77b) | OFIQ: v1.1.1 (2eb26a3) –&gt; v1.2.0 (d9beef8) | NFIQ2: v2.3.0 (76b8c4e) | BIQT: v26.04 (84485d5) | NISQA: latest (fe84f0f) | . v0.1.0 (2026-02-06) . 🚀 Engines . | OBQE: v1.6.5 (557b77b) | OFIQ: v1.1.1 (2eb26a3) | NFIQ2: v2.3.0 (76b8c4e) | BIQT: v26.04 (84485d5) | NISQA: latest (fe84f0f) | . ",
     "url": "/releasenotes/#bqcore-service",
     
     "relUrl": "/releasenotes/#bqcore-service"
-  },"102": {
+  },"103": {
     "doc": "Voice",
     "title": "Overview",
     "content": "The speech assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. ",
     "url": "/modalities/voice.html#overview",
     
     "relUrl": "/modalities/voice.html#overview"
-  },"103": {
+  },"104": {
     "doc": "Voice",
     "title": "Input",
     "content": "Create a folder named data under your working directory and put your audio files in this folder. Suported file formats: . | wav | . Due to algorithm limitation, sub-folder might not work as expected. If your folder with audio files is in data/speech/, files in data/speech/audio/ won’t be processed. ",
     "url": "/modalities/voice.html#input",
     
     "relUrl": "/modalities/voice.html#input"
-  },"104": {
+  },"105": {
     "doc": "Voice",
     "title": "Output",
     "content": "openbq will produce the quality scores generated by the engines as well as additional information in columns. It will be saved as CSV from CLI or JSON from API. Speech: . | Column | Description | . | quality | Overall quality estimation of the speech audio file. | . | noisiness | Quality degradation such as background, circuit, or coding noise. | . | discontinuity | Quality degradation caused by isolated or non-stationary distortions, e.g. introduced by packet-loss or clipping. | . | coloration | Quality degradation caused by frequency response distortions, e.g. introduced by bandwidth limitation, low bitrate codecs, or packet-loss concealment. | . | loudness | Influence of the loudness on the perceived quality of transmitted speech. | . | naturalness | Estimation of the naturalness of synthetic speech. | . NISQA Model . ",
     "url": "/modalities/voice.html#output",
     
     "relUrl": "/modalities/voice.html#output"
-  },"105": {
+  },"106": {
     "doc": "Voice",
     "title": "Voice",
     "content": ". | Overview | Input | Output | . ",
