@@ -63,3 +63,31 @@ __Iris__:
 | image_height           | Height of the input in pixels |
 
 > [Iris Engine](https://github.com/mitre/biqt-iris/blob/master/README.md)
+
+### Report
+
+Add `--report` to get an EDA report of your results:
+
+``` sh
+openbq --mode iris --input data/iris --report
+```
+
+For iris, start with these columns:
+
+| Column | What to look for |
+|---|---|
+| `quality`, `iso_overall_quality` | The distributions show overall dataset quality. |
+| `sharpness`, `iso_sharpness` | Out-of-focus images. |
+| `percent_visible_iris` | Iris covered by eyelids or eyelashes. |
+| `iso_iris_pupil_ratio` | Pupil too dilated or constricted (recommended 20–70). |
+| `iso_margin_adequacy` | Iris not centred in the image (recommended above 80). |
+| `iso_greyscale_utilization` | Poor use of the grey-level range (recommended 6 or greater). |
+
+To pull out samples outside the recommended ranges:
+
+``` sh
+openbq --mode filter --input <path to output CSV> --query "iso_iris_pupil_ratio < 20 or iso_iris_pupil_ratio > 70"
+```
+
+See [Output and Reports]({% link index/framework.md %}#eda-report) for what the report contains.
+

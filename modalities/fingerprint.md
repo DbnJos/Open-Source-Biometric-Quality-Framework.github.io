@@ -60,3 +60,30 @@ __Fingerprint__:
 
 > [NIST Interagency Report](https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8382.pdf)
 
+### Report
+
+Add `--report` to get an EDA report of your results:
+
+``` sh
+openbq --mode fingerprint --input data/finger --report
+```
+
+For fingerprints, start with these columns:
+
+| Column | What to look for |
+|---|---|
+| `nfiq2_score` | The distribution shows overall dataset quality (0–100, higher is better). A cluster of low scores points to capture problems. |
+| `fingerprint_image_with_minutiae` | Low counts suggest partial, smudged or poorly placed prints. |
+| `sufficient_fingerprint_foreground` | Small foreground areas indicate the finger covered only part of the sensor. |
+| `uniform_image`, `empty_image_or_contrast_too_low` | Flag blank or low-contrast images. |
+| `edge_std` | High values flag corrupt or badly cropped images. |
+
+To pull out low-quality samples for review:
+
+``` sh
+openbq --mode filter --input <path to output CSV> --query "nfiq2_score < 40"
+```
+
+See [Output and Reports]({% link index/framework.md %}#eda-report) for what the report contains.
+
+

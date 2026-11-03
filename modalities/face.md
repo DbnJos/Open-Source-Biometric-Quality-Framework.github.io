@@ -215,3 +215,32 @@ Optional processing engines:
 
 {: .note }
 > Not all the columns are included in the table above for clearity.
+
+### Report
+
+Add `--report` to get an EDA report of your results:
+
+``` sh
+openbq --mode face --input data/face --report
+```
+
+The columns depend on the engine you use. Start with:
+
+| Engine | Column | What to look for |
+|---|---|---|
+| OBQE | `yaw_degree`, `pitch_degree`, `roll_degree` | Head pose; wide spreads mean many non-frontal images. |
+| OBQE | `eye_closed_left`, `eye_closed_right` | How many images have closed eyes. |
+| OBQE | `ipd` | Inter-pupillary distance; low values mean the face is too small in the image. |
+| OBQE | `blurriness`, `brightness`, `background_colour_variance` | Blurred, dark or busy-background images. |
+| OFIQ | `quality` | Unified quality score; the distribution shows overall dataset quality. |
+| OFIQ | `head_pose_yaw`, `eyes_open`, `sharpness`, `background_uniformity` | The main ISO/IEC 29794-5 measures behind a low quality score. |
+| BIQT | `quality` | Overall quality score. |
+| BIQT | `blur_face`, `over_exposure_face` | Blurred or over-exposed faces. |
+
+To pull out low-quality samples for review, filter on a column from your engine. For example, OBQE images turned more than 15° left or right:
+
+``` sh
+openbq --mode filter --input <path to output CSV> --query "yaw_degree > 15 or yaw_degree < -15"
+```
+
+See [Output and Reports]({% link index/framework.md %}#eda-report) for what the report contains.
