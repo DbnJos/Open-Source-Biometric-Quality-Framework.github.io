@@ -83,110 +83,110 @@
     
     "relUrl": "/getting_started/bqInsightsDesktop.html#support"
   },"12": {
-    "doc": "bqconnect CLI",
-    "title": "bqconnect CLI",
-    "content": ". | bqconnect CLI . | Setup | Usage | Uninstall | Output | . | . 🚀 Introducing the new bqconnect CLI! . 🌟 bqconnect CLI now supports ARM-based CPUs! Whether you’re on an Apple M‑series or a Qualcomm Snapdragon X‑series processor, you can leverage its performance for biometric data analysis. ",
-    "url": "/getting_started/bqconnectcli.html",
-    
-    "relUrl": "/getting_started/bqconnectcli.html"
-  },"13": {
-    "doc": "bqconnect CLI",
-    "title": "Setup",
-    "content": "Prerequisites: . | Docker | Python (3.10+) | AMD64 or ARM64 CPU | . Install bqconnect CLI . pip install openbq . ",
-    "url": "/getting_started/bqconnectcli.html#setup",
-    
-    "relUrl": "/getting_started/bqconnectcli.html#setup"
-  },"14": {
-    "doc": "bqconnect CLI",
-    "title": "Usage",
-    "content": "To validate the installation, you could start a benchmark task. openbq --benchmark . Example use cases for biometric quality assessment: . # Process all face images in 'data/' openbq --input data --mode face # Process iris images in 'data/iris/' openbq --input data/iris --mode iris # Process all face images using OFIQ engine openbq --input data --mode face --engine OFIQ # Enable EDA report for the assessment openbq --input data/fingerprint --mode fingerprint --report . Check current installed version: . openbq --verison . Get bqconnect CLI Update if available: . openbq --update . ",
-    "url": "/getting_started/bqconnectcli.html#usage",
-    
-    "relUrl": "/getting_started/bqconnectcli.html#usage"
-  },"15": {
-    "doc": "bqconnect CLI",
-    "title": "Uninstall",
-    "content": "openbq --uninstall . ",
-    "url": "/getting_started/bqconnectcli.html#uninstall",
-    
-    "relUrl": "/getting_started/bqconnectcli.html#uninstall"
-  },"16": {
-    "doc": "bqconnect CLI",
-    "title": "Output",
-    "content": "OpenBQ will produce the quality metrics in a CSV file, a EDA report when enabled. ",
-    "url": "/getting_started/bqconnectcli.html#output",
-    
-    "relUrl": "/getting_started/bqconnectcli.html#output"
-  },"17": {
-    "doc": "bqconnect CLI",
-    "title": "Further details about the command and advanced option flags",
-    "content": ". | Command Line Interface Cookbook | . ",
-    "url": "/getting_started/bqconnectcli.html#further-details-about-the-command-and-advanced-option-flags",
-    
-    "relUrl": "/getting_started/bqconnectcli.html#further-details-about-the-command-and-advanced-option-flags"
-  },"18": {
     "doc": "Commmand Line Tool",
     "title": "Workflow",
     "content": "--- config: theme: neutral layout: elk --- graph TD download([Install bqconnect CLI]) --&gt; data(Creat input folder in your workspace) data --&gt; run((Run command in terminal)) run --&gt; output[Processing] output --&gt; csv[Raw Data in CSV] output --&gt; quality[Quality Report in HTML] output --&gt; log[Log] output --&gt; outlier[Outlier Report in HTML] output --&gt; table[Outlier Table in HTML] . ",
     "url": "/cookbook/bqconnectcli.html#workflow",
     
     "relUrl": "/cookbook/bqconnectcli.html#workflow"
-  },"19": {
+  },"13": {
     "doc": "Commmand Line Tool",
     "title": "Install",
     "content": "pip install openbq . ",
     "url": "/cookbook/bqconnectcli.html#install",
     
     "relUrl": "/cookbook/bqconnectcli.html#install"
-  },"20": {
+  },"14": {
     "doc": "Commmand Line Tool",
     "title": "Use Cases",
     "content": "Validate Installation or Benchmarking . To validate your setup or benchmark your machine: . openbq --benchmark # you can specify modality (face, iris, finger) just like regular run too. openbq -B -M fingerprint # benchmark fingerprint analysis. openbq -B -M face -E ofiq # benchmark face analysis with OFIQ engine. Analyze Iris Images . If all the iris images are organised under the ‘data/input’ folder, the tool can be run in iris mode with the following command: . openbq --input data/input/ --mode iris . Match Filename Pattern . Should the fingerprint files follow a naming convention containing the text ‘finger’, such as finger_1.jpg or X_finger.png, they can be located and analysed using: . openbq --input data/input/ --mode iris --filename \"*FINGER*\" . Match Specific File Formats . If the input folder contains files in various formats and you want to focus on specific formats, the files can be identified and processed with this command: . openbq --input data/input/ --mode iris --type \"jp2,bmp\" . Pre-processing before Analyzing . Before initiating the fingerprint scanning process, the file format may need to be converted. Use the following command to convert files of JP2 and JPEG to PNG (the default target format): . openbq --input data/input/ --mode fingerprint --convert \"jp2,jpeg\" . If there is specific requirement for the file format, the following command can be used to specify the target format, for example, WSQ: . All the pre-processing processes are temporary only for the following analysis task, it will not modify the input file, and won’t be kept after the analysis. openbq --input data/input/ --mode fingerprint --target wsq . Find Outliers using Filter . When a filter is applied, there is going to be 2 extra outputs, a quality report on the outliers filtered and a page for you to view these samples. Get output of finderprint samples with NFIQ2 score larger than 60: . openbq --input data/input/ --mode finger --query \"NFIQ2&gt;60\" . Provide output CSV from previous run and apply filter: . openbq --mode filter --input data/output.csv --query \"NFIQ2&lt;40\" . Selected columns and apply filter query to them: . openbq --mode filter --input data/output.csv --columns \"NFIQ2,edge_std\" --query \"NFIQ2&lt;40\" . Note: If there is any space along the filepath, wrap it with double quotes and escape the space. Please refer to the example below: . e.g. input folder is data/iris folder/ . openbq --input \"data/iris\\ folder/\" --mode iris . Select Alternative Face Analysis Engines . Currently, OpenBQ support 3 analysis engines for face modality: . | OBQE (native Biometix) | OFIQ (by BSI) | BIQT (by MITRE) | . openbq --mode face --input data/input/ --engine ofiq . Fusion Engine Mode . Specify fusion as the engine will give you combined output from both BQAT and OFIQ: . openbq --mode face --input data/input/ --engine fusion . You may combine more than one engine using code below: . | Engine | Code | . | OBQE | 4 (100) | . | OFIQ | 2 (010) | . | BIQT | 1 (001) | . Enable OBQE and OFIQ: . openbq --mode face --input data/input/ --engine fusion --fusion 6 . All 3 engines: . openbq --mode face --input data/input/ --engine fusion --fusion 7 . Preprocessing Mode . You can feed a dataset to openbq and preprocess the images for later analysis. The following example shows how you can send the folder data/input/ in, and: . | Convert the images to PNG format | Convert color mode to RGB | Resize the images by percentage (30% in this case) | . openbq -M preprocess -I data/input/ --config png,0.3,rgb . And of course you could configured it to do single preprocess at a time. # convert images to BMP openbq -M preprocess -I data/input/ --config bmp # convert images to grayscale openbq -M preprocess -I data/input/ --config grayscale # resize images by width (300px in this case, height will be inferred accordingly, aspect ratio maintained) openbq -M preprocess -I data/input/ --config 300 . In terms of resizing configuration, number smaller than 10 will be treated as percentage/magnification, for instance, 3.7 will be 370%, while 128, which is greater than 10, will be 128 in width. Miscellaneous . Enable reporting to get a EDA report and preview page along with the raw CSV output: . openbq --input data/input/ --mode iris --report . Process samples in /input, but limit to first 100k files: . openbq --input data/input/ --mode face --limit 100000 . Generate EDA report directly from existing CSV: . openbq --input data/results.csv --mode report . For offline deployment on Linux server, download the pre-built static binary, and grant execute permission: . chmod +x openbq . Download . And replace the base command openbq with ./openbq: ./openbq --version . ",
     "url": "/cookbook/bqconnectcli.html#use-cases",
     
     "relUrl": "/cookbook/bqconnectcli.html#use-cases"
-  },"21": {
+  },"15": {
     "doc": "Commmand Line Tool",
     "title": "bqconnect CLI Task Flags",
     "content": "| Short | Long | Description | . | -M | --mode | (REQUIRED) Specify openbq running mode (fingerprint, face, iris, speech, filter, report, preprocessing). | . | -I | --input | (REQUIRED) Specify input directory or CSV file for analysis. | . | -O | --output | (OPTIONAL) Specify output directory. | . | -R | --report | (OPTIONAL) Switch on/off EDA report generation (true, false). | . | -E | --engine | (OPTIONAL) Select alternative face analysis engine (openbq, ofiq, biqt, fusion). | . | NA | --fusion | (OPTIONAL) Fusion mode engine code. | . | -B | --benchmark | (OPTIONAL) Run system benchmarking analysis. | . | -L | --limit | (OPTIONAL) Set a limit for number of files to process. | . | -F | --filename | (OPTIONAL) Specify filename pattern for searching in the folder. | . | NA | --type | (OPTIONAL) Specify file types to process in the input folder. | . | -C | --convert | (OPTIONAL) Specify file types to convert before processing. | . | -T | --target | (OPTIONAL) Specify target type to convert to. | . | NA | --columns | (OPTIONAL) Select columns to investigate | . | -Q | --query | (OPTIONAL) Queries to apply on the columns | . | -W | --cwd | (OPTIONAL) Specify current working directory for url in the report | . | NA | --config | (OPTIONAL) Configure preprocessing task ([target format],[target width],[color mode (grayscale, rgb)]”). | . ",
     "url": "/cookbook/bqconnectcli.html#bqconnect-cli-task-flags",
     
     "relUrl": "/cookbook/bqconnectcli.html#bqconnect-cli-task-flags"
-  },"22": {
+  },"16": {
     "doc": "Commmand Line Tool",
     "title": "Python Entry Point Flags",
     "content": "| Short | Long | Description | . | -v | --version | Display version info. | . | NA | --help | Display openbq task help info. | . | NA | --update | Check for new version backend container. | . | NA | --uninstall | Remove openbq. | . | NA | --tag | Specify backend container tag. | . | NA | --shm | Specify shared memory allocated to the container. | . Check verions: . openbq --version . Update bqconnect CLI (pull the latest container): . openbq --update . Uninstall bqconnect CLI (CLI tool and/or backend container): . openbq --uninstall . Configure shared memory allocated to docker container (will allocate half of the physical memory avaiable by default): . openbq --shm 8192MB [OpenBQ TASK OPTIONS] . Specify alternative backend container: . openbq --tag ghcr.io/open-source-biometric-quality-framework/bqcore-service:v1.0.0 [OpenBQ TASK OPTIONS] . ",
     "url": "/cookbook/bqconnectcli.html#python-entry-point-flags",
     
     "relUrl": "/cookbook/bqconnectcli.html#python-entry-point-flags"
-  },"23": {
+  },"17": {
     "doc": "Commmand Line Tool",
     "title": "Output Example",
     "content": "Terminal Window . Quality Report . Result Overview . Statistics of column quality . Cross Analysis . Filter for Outliers . Tabulation of Outliers . You can click on it to view the origin file (need to be open in the working directory): . ",
     "url": "/cookbook/bqconnectcli.html#output-example",
     
     "relUrl": "/cookbook/bqconnectcli.html#output-example"
-  },"24": {
+  },"18": {
     "doc": "Commmand Line Tool",
     "title": "Log",
     "content": "The log file will keep a record of information during the analysis process, including errors, warnings, and other metadata of the task. { \"metadata\": { \"version\": \"openbq v0.0.1 beta\", \"datetime\": \"2026-00-00 00:59:59.984337\", \"input directory\": \"data/finger/\", \"processed\": 208, \"failed\": 0, \"log\": 17, \"process time\": \"0h0m28s\" }, \"log\": [ { \"nfiq2\": \"Error: NFIQ2 computeQualityScore returned an error code: Could not create feature set from raw data: FRFXLL_ERR_FB_TOO_SMALL_AREA: Fingerprint area is too small. Most likely this is because the tip of the finger is presented.\", \"file\": \"data/finger/00001052_plain_500_10.png\" }, { \"convert\": \"jp2 -&gt; png\", \"file\": \"data/finger/solid_0_801x1000.jp2\" }, { \"nfiq2\": \"Error: NFIQ2 computeQualityScore returned an error code: Width is too large after trimming whitespace. WxH: 801x1000, but maximum width is 800\", \"file\": \"data/finger/solid_0_801x1000.jp2\" }, { \"convert\": \"jp2 -&gt; png\", \"file\": \"data/finger/solid_0_800x1001.jp2\" }, { \"nfiq2\": \"Error: NFIQ2 computeQualityScore returned an error code: Height is too large after trimming whitespace. WxH: 800x1001, but maximum height is 1000\", \"file\": \"data/finger/solid_0_800x1001.jp2\" }, ] } . ",
     "url": "/cookbook/bqconnectcli.html#log",
     
     "relUrl": "/cookbook/bqconnectcli.html#log"
-  },"25": {
+  },"19": {
     "doc": "Commmand Line Tool",
     "title": "Output",
     "content": "The outputs will be saved at: data/output/. Note: The tool is designed to be executed with a /data folder in your working directory. The /data folder (where all the images are stored) will be mounted to the container. “Read and write” permission is required for this folder. It should work as long as the folder was created before spinning up the server. Otherwise, the ownership of the folder will need to be changed. ",
     "url": "/cookbook/bqconnectcli.html#output",
     
     "relUrl": "/cookbook/bqconnectcli.html#output"
-  },"26": {
+  },"20": {
     "doc": "Commmand Line Tool",
     "title": "Commmand Line Tool",
     "content": ". | Workflow | Install | Use Cases . | Validate Installation or Benchmarking | Analyze Iris Images | Match Filename Pattern | Match Specific File Formats | Pre-processing before Analyzing | Find Outliers using Filter | Select Alternative Face Analysis Engines | Fusion Engine Mode | Preprocessing Mode | Miscellaneous | . | bqconnect CLI Task Flags | Python Entry Point Flags | Output Example . | Terminal Window | Quality Report . | Result Overview | Statistics of column quality | Cross Analysis | . | Filter for Outliers | Tabulation of Outliers | . | Log | . ",
     "url": "/cookbook/bqconnectcli.html",
     
     "relUrl": "/cookbook/bqconnectcli.html"
+  },"21": {
+    "doc": "bqconnect CLI",
+    "title": "bqconnect CLI",
+    "content": ". | bqconnect CLI . | Setup | Usage | Uninstall | Output | . | . 🚀 Introducing the new bqconnect CLI! . 🌟 bqconnect CLI now supports ARM-based CPUs! Whether you’re on an Apple M‑series or a Qualcomm Snapdragon X‑series processor, you can leverage its performance for biometric data analysis. ",
+    "url": "/getting_started/bqconnectcli.html",
+    
+    "relUrl": "/getting_started/bqconnectcli.html"
+  },"22": {
+    "doc": "bqconnect CLI",
+    "title": "Setup",
+    "content": "Prerequisites: . | Docker | Python (3.10+) | AMD64 or ARM64 CPU | . Install bqconnect CLI . pip install openbq . ",
+    "url": "/getting_started/bqconnectcli.html#setup",
+    
+    "relUrl": "/getting_started/bqconnectcli.html#setup"
+  },"23": {
+    "doc": "bqconnect CLI",
+    "title": "Usage",
+    "content": "To validate the installation, you could start a benchmark task. openbq --benchmark . Example use cases for biometric quality assessment: . # Process all face images in 'data/' openbq --input data --mode face # Process iris images in 'data/iris/' openbq --input data/iris --mode iris # Process all face images using OFIQ engine openbq --input data --mode face --engine OFIQ # Enable EDA report for the assessment openbq --input data/fingerprint --mode fingerprint --report . Check current installed version: . openbq --verison . Get bqconnect CLI Update if available: . openbq --update . ",
+    "url": "/getting_started/bqconnectcli.html#usage",
+    
+    "relUrl": "/getting_started/bqconnectcli.html#usage"
+  },"24": {
+    "doc": "bqconnect CLI",
+    "title": "Uninstall",
+    "content": "openbq --uninstall . ",
+    "url": "/getting_started/bqconnectcli.html#uninstall",
+    
+    "relUrl": "/getting_started/bqconnectcli.html#uninstall"
+  },"25": {
+    "doc": "bqconnect CLI",
+    "title": "Output",
+    "content": "OpenBQ will produce the quality metrics in a CSV file, a EDA report when enabled. ",
+    "url": "/getting_started/bqconnectcli.html#output",
+    
+    "relUrl": "/getting_started/bqconnectcli.html#output"
+  },"26": {
+    "doc": "bqconnect CLI",
+    "title": "Further details about the command and advanced option flags",
+    "content": ". | Command Line Interface Cookbook | . ",
+    "url": "/getting_started/bqconnectcli.html#further-details-about-the-command-and-advanced-option-flags",
+    
+    "relUrl": "/getting_started/bqconnectcli.html#further-details-about-the-command-and-advanced-option-flags"
   },"27": {
     "doc": "CHANGELOG",
     "title": "CHANGELOG",
@@ -715,46 +715,116 @@
   },"102": {
     "doc": "Modalities",
     "title": "Modalities",
-    "content": ". | Fingerprint | . The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features. The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. | Face | . The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. | Iris | . The iris sample assessment module provides various quality attributes, features, and ISO metrics. | Speech | . The speech assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. ",
+    "content": ". | Fingerprint | . The engine for the analysis of fingerprints is based on NIST/NFIQ2 quality features. The quality score links the image quality of optical and ink 500 PPI fingerprints to operational recognition performance. | Face | . The face image assessment module provides metrics including head pose, smile detection, inter-eye distance, closed eyes, etc. | Iris | . The iris sample assessment module provides various quality attributes, features, and ISO metrics. | Voice | . The speech assessment module provides various quality metrics, including naturalness, noisiness, etc. ",
     "url": "/modalities/modalities.html",
     
     "relUrl": "/modalities/modalities.html"
   },"103": {
+    "doc": "Privacy and Data Handling",
+    "title": "Privacy and Data Handling",
+    "content": "OpenBQ is built on privacy-by-design principles: biometric data stays on infrastructure you control, is processed only for as long as a run takes, and is never sent to Biometix or any third party. This page explains how OpenBQ handles data, what its outputs contain, and what deployers are responsible for. ",
+    "url": "/privacy/",
+    
+    "relUrl": "/privacy/"
+  },"104": {
+    "doc": "Privacy and Data Handling",
+    "title": "How OpenBQ handles data",
+    "content": ". | Runs locally. All processing happens in a Docker container on your own machine or server. OpenBQ does not upload biometric samples or results anywhere, and collects no telemetry. | Transient processing. Samples are read from the folder you mount and assessed inside the container. Any temporary working copies are deleted when the run finishes, and the container is removed when it exits. | Samples are never copied into outputs. OpenBQ writes only quality metrics and attributes, such as scores, measurements and detections. Images and recordings are not stored in or embedded in any output file. | No retention by OpenBQ. OpenBQ keeps nothing after a run. Results are saved only in the folder you choose (see Output), and how long they are kept is the deployer’s decision. | . --- config: theme: neutral flowchart: subGraphTitleMargin: top: 5 bottom: 35 --- flowchart LR subgraph host [\"Your infrastructure\"] samples[(\"Biometric samples\")] subgraph container [\"OpenBQ container&lt;br/&gt;&lt;i&gt;(removed after each run&lt;/i&gt;)\"] proc[\"Transient processing\"] end results[(\"Results&lt;br/&gt;quality metrics only\")] end samples -- \"read\" --&gt; proc proc -- \"CSV · JSON · HTML\" --&gt; results ext([\"Biometix / third parties\"]) host -. \"nothing sent\" .-x ext . ",
+    "url": "/privacy/#how-openbq-handles-data",
+    
+    "relUrl": "/privacy/#how-openbq-handles-data"
+  },"105": {
+    "doc": "Privacy and Data Handling",
+    "title": "What the outputs contain",
+    "content": "Results are quality metrics, not biometric samples. However, some output can still be personal information: . | Output | Why it may be personal information | . | file column (every modality) | The path to each sample. File names often contain names, ID numbers or dates of birth. | . | Face attributes (OBQE engine) | Estimated age, gender, ethnicity, emotion and headgear_detection. Linked to a sample, these may be sensitive personal information. | . | Reports and data tables | Built from the results CSV, so they contain the same information, and the data table links back to each sample. | . Store and share result files with the same care as the samples themselves. Estimated attributes are provided to help assess quality and capture conditions across a dataset (for example, checking whether quality differs between groups). They are estimates, not ground truth, and must not be used to identify or profile individuals. ",
+    "url": "/privacy/#what-the-outputs-contain",
+    
+    "relUrl": "/privacy/#what-the-outputs-contain"
+  },"106": {
+    "doc": "Privacy and Data Handling",
+    "title": "Use pseudonymous file names",
+    "content": "Because results record the path to each sample, the safest approach is to remove identifying details from file names before running OpenBQ: . | Rename each file to a neutral ID, e.g. 0001.jpg, 0002.jpg. | Keep the mapping between IDs and people in a separate, secured file that is not shared with the results. | Run OpenBQ on the renamed files. | . Results can still be matched back to individuals when needed, using the mapping file, while the result files themselves contain no names or ID numbers. ",
+    "url": "/privacy/#use-pseudonymous-file-names",
+    
+    "relUrl": "/privacy/#use-pseudonymous-file-names"
+  },"107": {
+    "doc": "Privacy and Data Handling",
+    "title": "Configuration and models",
+    "content": "Apart from your samples, OpenBQ uses only files bundled in its Docker image. None of these contain personal information, and OpenBQ downloads nothing at runtime. | Import | What it is | Contains personal information? | . | OBQE models (selfie_segmenter.tflite, hair_segmenter.tflite, haarcascade_smile.xml) | Pre-trained models for background, hair and smile detection | No, model weights only | . | OFIQ configuration (ofiq_config.jaxn) and models | OFIQ engine settings and quality models | No | . | NISQA weights (nisqa.tar, nisqa_tts.tar) | Speech quality model weights | No | . | NFIQ2 and BIQT | Built into the engines | No | . | Built-in thresholds | Fixed values in the code, e.g. face detection confidence (0.7) | No | . | Your command-line settings | --query, --config, --type and other options | Only what you enter; used for that run and not stored | . ",
+    "url": "/privacy/#configuration-and-models",
+    
+    "relUrl": "/privacy/#configuration-and-models"
+  },"108": {
+    "doc": "Privacy and Data Handling",
+    "title": "Deployer responsibilities",
+    "content": "OpenBQ is a tool, not a service: Biometix never receives or processes your data. The organisation that deploys OpenBQ is the data controller and keeps full ownership, control and responsibility for compliance, including: . | Lawful basis and consent for collecting and assessing biometric samples | Notices to the people whose samples are assessed | Access, correction and deletion requests from those people | Security and retention of samples and result files | Use of results, including any decisions made from quality scores or estimated attributes | . ",
+    "url": "/privacy/#deployer-responsibilities",
+    
+    "relUrl": "/privacy/#deployer-responsibilities"
+  },"109": {
+    "doc": "Privacy and Data Handling",
+    "title": "Applicable laws",
+    "content": "OpenBQ’s local, transient design is intended to support deployers in meeting data protection laws such as: . | Australia: Privacy Act 1988 and the Australian Privacy Principles (APPs) | European Union: General Data Protection Regulation (GDPR) and the EU AI Act | India: Digital Personal Data Protection Act 2023 | . Deployers should confirm which laws apply to their use. This page is not legal advice. ",
+    "url": "/privacy/#applicable-laws",
+    
+    "relUrl": "/privacy/#applicable-laws"
+  },"110": {
+    "doc": "Privacy and Data Handling",
+    "title": "Optional AI features (bqInsights Desktop)",
+    "content": "The built-in AI assistant in bqInsights Desktop runs locally with Ollama by default, so nothing leaves your computer. If you choose OpenAI or Claude as the AI provider instead, any data you send to the assistant is processed by that provider under its own terms. If you don’t need AI features, you can leave them switched off. ",
+    "url": "/privacy/#optional-ai-features-bqinsights-desktop",
+    
+    "relUrl": "/privacy/#optional-ai-features-bqinsights-desktop"
+  },"111": {
+    "doc": "Privacy and Data Handling",
+    "title": "This documentation website",
+    "content": "docs.openbq.io uses Google Analytics, with IP anonymisation enabled, to understand how the documentation is used. It does not collect biometric data. You can opt out with your browser’s privacy settings or the Google Analytics opt-out add-on. ",
+    "url": "/privacy/#this-documentation-website",
+    
+    "relUrl": "/privacy/#this-documentation-website"
+  },"112": {
+    "doc": "Privacy and Data Handling",
+    "title": "Contact",
+    "content": "For privacy questions, contact [CONTACT EMAIL]. ",
+    "url": "/privacy/#contact",
+    
+    "relUrl": "/privacy/#contact"
+  },"113": {
     "doc": "RELEASE NOTES",
     "title": "RELEASE NOTES",
     "content": ". | RELEASE NOTES . | BQCore Service . | v0.1.3 (2026-10-08) 🆕 | . | . | . ",
     "url": "/releasenotes/",
     
     "relUrl": "/releasenotes/"
-  },"104": {
+  },"114": {
     "doc": "RELEASE NOTES",
     "title": "BQCore Service",
     "content": ". v0.1.3 (2026-10-08) 🆕 . 🚀 Engines . | OBQE: v1.6.5 (557b77b) | OFIQ: v1.1.1 (2eb26a3) –&gt; v1.2.0 (d9beef8) | NFIQ2: v2.3.0 (76b8c4e) | BIQT: v26.04 (84485d5) | NISQA: latest (fe84f0f) | . v0.1.0 (2026-02-06) . 🚀 Engines . | OBQE: v1.6.5 (557b77b) | OFIQ: v1.1.1 (2eb26a3) | NFIQ2: v2.3.0 (76b8c4e) | BIQT: v26.04 (84485d5) | NISQA: latest (fe84f0f) | . ",
     "url": "/releasenotes/#bqcore-service",
     
     "relUrl": "/releasenotes/#bqcore-service"
-  },"105": {
+  },"115": {
     "doc": "Voice",
     "title": "Overview",
     "content": "The speech assessment module provides various quality metrics, including naturalness, colouration, noisiness, etc. ",
     "url": "/modalities/voice.html#overview",
     
     "relUrl": "/modalities/voice.html#overview"
-  },"106": {
+  },"116": {
     "doc": "Voice",
     "title": "Input",
     "content": "Create a folder named data under your working directory and put your audio files in this folder. Suported file formats: . | wav | . Due to algorithm limitation, sub-folder might not work as expected. If your folder with audio files is in data/speech/, files in data/speech/audio/ won’t be processed. ",
     "url": "/modalities/voice.html#input",
     
     "relUrl": "/modalities/voice.html#input"
-  },"107": {
+  },"117": {
     "doc": "Voice",
     "title": "Output",
     "content": "openbq will produce the quality scores generated by the engines as well as additional information in columns. It will be saved as CSV from CLI or JSON from API. Speech: . | Column | Description | . | quality | Overall quality estimation of the speech audio file. | . | noisiness | Quality degradation such as background, circuit, or coding noise. | . | discontinuity | Quality degradation caused by isolated or non-stationary distortions, e.g. introduced by packet-loss or clipping. | . | coloration | Quality degradation caused by frequency response distortions, e.g. introduced by bandwidth limitation, low bitrate codecs, or packet-loss concealment. | . | loudness | Influence of the loudness on the perceived quality of transmitted speech. | . | naturalness | Estimation of the naturalness of synthetic speech. | . NISQA Model . ",
     "url": "/modalities/voice.html#output",
     
     "relUrl": "/modalities/voice.html#output"
-  },"108": {
+  },"118": {
     "doc": "Voice",
     "title": "Voice",
     "content": ". | Overview | Input | Output | . ",
